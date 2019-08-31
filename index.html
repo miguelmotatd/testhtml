@@ -2,7 +2,7 @@
   <header>
   <script>
     window.addEventListener("message", function(event) {
-      alert("ola mundo");
+      //alert("ola mundo");
         console.log(event.data);
       let callUrl = 'td+tel:' + event.data;
       window.open(callUrl, "_self");
@@ -10,7 +10,7 @@
       //window.close();
       window.setTimeout(
         () => {
-        alert("adeus mundo");
+        //alert("adeus mundo");
         window.close();
         }
         , 2000);
