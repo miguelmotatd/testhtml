@@ -1,6 +1,18 @@
 <html>
   <header>
-  <script src="https://omnipoc-dev-ed--c.visualforce.com/support/console/42.0/integration.js" type="text/javascript"></script>
+  <script>
+    var lexOrigin = "https://yourdomain-dev-ed.lightning.force.com";
+    window.addEventListener("message", function(event) {
+      debugger;
+        if (event.origin !== lexOrigin) {
+            // Not the expected origin: reject message!
+            return;
+        }
+        // Handle message
+        console.log(event.data);
+    }, false);
+</script>
+
   </header>
   <body>
     <p>sforce console test</p>
