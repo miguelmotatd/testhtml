@@ -5,7 +5,9 @@
       debugger;
         console.log(event.data);
       let callUrl = 'td+tel:' + event.data;
-      window.open(callUrl);
+      window.open(callUrl, "_self");
+      debugger;
+      window.close();
     }, false);
 </script>
 
