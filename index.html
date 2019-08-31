@@ -1,20 +1,16 @@
 <html>
   <header>
   <script>
-    var lexOrigin = "https://yourdomain-dev-ed.lightning.force.com";
     window.addEventListener("message", function(event) {
       debugger;
-        if (event.origin !== lexOrigin) {
-            // Not the expected origin: reject message!
-            return;
-        }
-        // Handle message
         console.log(event.data);
+      let callUrl = 'td+tel:' + event.data;
+      window.open(callUrl);
     }, false);
 </script>
 
   </header>
   <body>
-    <p>sforce console test</p>
+    <p>starting the call</p>
   </body>
 </html>
